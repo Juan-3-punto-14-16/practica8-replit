@@ -147,7 +147,7 @@ function Home() {
       <header className="topbar">
         <nav className="nav-wrap" aria-label="Navegación principal">
           <a className="brand" href="#inicio" aria-label="Tacos el Trebol, inicio" onClick={() => setMobileMenuOpen(false)}>
-            <span className="brand-mark">T</span>
+            <span className="brand-mark"><img src="/trebol.jpg" alt="" aria-hidden="true" data-testid="img-brand-clover-header" /></span>
             <span><span className="brand-name">Tacos el Trebol</span><span className="brand-sub">Tradición de familia</span></span>
           </a>
           <button className="menu-toggle" type="button" aria-label={mobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'} aria-expanded={mobileMenuOpen} onClick={() => setMobileMenuOpen((open) => !open)} data-testid="button-mobile-menu">
@@ -346,7 +346,7 @@ function Footer() {
   return <footer className="academic-footer">
     <div className="footer-inner">
       <div className="footer-top">
-        <div className="footer-brand"><a className="brand" href="#inicio"><span className="brand-mark">T</span><span><span className="brand-name">Tacos el Trebol</span><span className="brand-sub">Tradición de familia</span></span></a><p>Birria de res, lonches, consomé y aguas frescas. Una mesa familiar en Tonalá, Jalisco, desde hace más de 20 años.</p></div>
+        <div className="footer-brand"><a className="brand" href="#inicio"><span className="brand-mark"><img src="/trebol.jpg" alt="" aria-hidden="true" data-testid="img-brand-clover-footer" /></span><span><span className="brand-name">Tacos el Trebol</span><span className="brand-sub">Tradición de familia</span></span></a><p>Birria de res, lonches, consomé y aguas frescas. Una mesa familiar en Tonalá, Jalisco, desde hace más de 20 años.</p></div>
         <div className="footer-col"><h3>Visítanos</h3><p>P.º Lomas del Sur 7809 B<br />Loma Dorada Delegación A<br />C.P. 45418, Tonalá, Jalisco</p><a className="footer-map" href={mapUrl} target="_blank" rel="noreferrer" data-testid="link-maps-footer"><MapPin size={14} /> Ver ubicación en Google Maps</a></div>
         <div className="footer-col"><h3>Horario y contacto</h3><p>Lunes a domingo<br />8:00 a.m. — 1:00 p.m.</p><p><a href="tel:+523332224040" data-testid="link-footer-phone">33 3222 4040</a><br />Comer aquí · Recoger en auto · A domicilio</p></div>
       </div>

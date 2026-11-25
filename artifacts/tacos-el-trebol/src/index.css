@@ -117,7 +117,8 @@ a { color: inherit; }
 .topbar { position: sticky; top: 0; z-index: 20; background: rgba(255,253,249,.94); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(155,34,38,.12); }
 .nav-wrap { max-width: 1200px; margin: auto; padding: 0 24px; min-height: 76px; display:flex; align-items:center; justify-content:space-between; gap:22px; }
 .brand { display:flex; gap:11px; align-items:center; text-decoration:none; color:#9b2226; min-width:max-content; }
-.brand-mark { width:42px; height:42px; display:grid; place-items:center; background:#9b2226; color:#fffdf9; border-radius:50% 50% 48% 12%; font-family:var(--app-font-serif); font-weight:800; font-size:21px; transform:rotate(-4deg); }
+.brand-mark { width:42px; height:42px; display:grid; place-items:center; position:relative; overflow:hidden; isolation:isolate; background:#9b2226; color:#fffdf9; border-radius:50% 50% 48% 12%; font-family:var(--app-font-serif); font-weight:800; font-size:21px; transform:rotate(-4deg); }
+.brand-mark img { width:100%; height:100%; object-fit:cover; object-position:center 51%; filter:grayscale(1) sepia(1) saturate(7) hue-rotate(322deg) brightness(.95); mix-blend-mode:screen; transform:scale(1.15); }
 .brand-name { font:700 18px/1 var(--app-font-serif); letter-spacing:-.04em; }
 .brand-sub { display:block; color:#766b60; font-size:9px; font-weight:700; letter-spacing:.13em; text-transform:uppercase; margin-top:5px; }
 .nav-links { display:flex; gap:26px; align-items:center; }

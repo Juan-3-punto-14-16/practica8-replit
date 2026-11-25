@@ -61,29 +61,24 @@ const initialOrder: OrderDetails = {
 };
 const formatPrice = (value: number) => `$${value.toFixed(2)} MXN`;
 
-const heartLeafPath = 'M0 0 C-2 -2 -8 -7 -8 -12 C-8 -18 -2 -20 0 -14 C2 -20 8 -18 8 -12 C8 -7 2 -2 0 0 Z';
-
 function CloverIcon({ size }: { size: 'header' | 'footer' }) {
   return (
     <svg
-      className={`brand-clover brand-clover-${size}`}
-      viewBox="0 0 48 48"
+      width="36"
+      height="36"
+      viewBox="0 0 100 100"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
+      className={`brand-clover brand-clover-${size}`}
       focusable="false"
       data-testid={`icon-clover-${size}`}
     >
-      <path
-        d="M24 23 C24 31 25 37 30 41 C32 43 34 44 37 45"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-      />
-      {[45, 135, 225, 315].map((angle) => (
-        <g key={angle} transform={`translate(24 23) rotate(${angle}) translate(0 -2.5)`}>
-          <path d={heartLeafPath} fill="currentColor" />
-        </g>
-      ))}
+      <path d="M 48 48 C 36 48 16 44 16 28 C 16 18 26 14 33 21 C 33 13 44 12 47 23 C 49 32 48 42 48 48 Z" />
+      <path d="M 52 48 C 52 42 51 32 53 23 C 56 12 67 13 67 21 C 74 14 84 18 84 28 C 84 44 64 48 52 48 Z" />
+      <path d="M 48 52 C 48 58 49 68 47 77 C 44 88 33 87 33 79 C 26 86 16 82 16 72 C 16 56 36 52 48 52 Z" />
+      <path d="M 52 52 C 64 52 84 56 84 72 C 84 82 74 86 67 79 C 67 87 56 88 53 77 C 51 68 52 58 52 52 Z" />
+      <path d="M 48.5 50 Q 49 74 41 91 L 47 93 Q 54 75 51.5 50 Z" />
     </svg>
   );
 }

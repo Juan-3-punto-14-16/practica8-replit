@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Tacos el Trebol"
+description = "Sitio web responsivo para Tacos el Trebol, una taquería tradicional de Tonalá especializada en birria de res, con menú, reseñas, ubicación y pedidos a domicilio."
+version = "1.0.0"
+id = "artifacts/tacos-el-trebol"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22687
+
+[services.development]
+run = "pnpm --filter @workspace/tacos-el-trebol run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/tacos-el-trebol", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/tacos-el-trebol/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22687"
+BASE_PATH = "/"

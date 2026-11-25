@@ -61,28 +61,29 @@ const initialOrder: OrderDetails = {
 };
 const formatPrice = (value: number) => `$${value.toFixed(2)} MXN`;
 
+const heartLeafPath = 'M0 0 C-2 -2 -8 -7 -8 -12 C-8 -18 -2 -20 0 -14 C2 -20 8 -18 8 -12 C8 -7 2 -2 0 0 Z';
+
 function CloverIcon({ size }: { size: 'header' | 'footer' }) {
   return (
     <svg
       className={`brand-clover brand-clover-${size}`}
-      viewBox="0 0 48 54"
+      viewBox="0 0 48 48"
       aria-hidden="true"
       focusable="false"
       data-testid={`icon-clover-${size}`}
     >
       <path
-        d="M24 25 C24 33 24 38 28 43 C31 47 34 49 37 51"
+        d="M24 23 C24 31 25 37 30 41 C32 43 34 44 37 45"
         fill="none"
         stroke="currentColor"
-        strokeWidth="3"
+        strokeWidth="2.5"
         strokeLinecap="round"
       />
-      <g fill="currentColor">
-        <path d="M24 25 C21 22 14 17 14 11 C14 4 21 4 24 11 C27 4 34 4 34 11 C34 17 27 22 24 25 Z" />
-        <path d="M24 25 C21 22 14 17 14 11 C14 4 21 4 24 11 C27 4 34 4 34 11 C34 17 27 22 24 25 Z" transform="rotate(90 24 25)" />
-        <path d="M24 25 C21 22 14 17 14 11 C14 4 21 4 24 11 C27 4 34 4 34 11 C34 17 27 22 24 25 Z" transform="rotate(180 24 25)" />
-        <path d="M24 25 C21 22 14 17 14 11 C14 4 21 4 24 11 C27 4 34 4 34 11 C34 17 27 22 24 25 Z" transform="rotate(270 24 25)" />
-      </g>
+      {[45, 135, 225, 315].map((angle) => (
+        <g key={angle} transform={`translate(24 23) rotate(${angle}) translate(0 -2.5)`}>
+          <path d={heartLeafPath} fill="currentColor" />
+        </g>
+      ))}
     </svg>
   );
 }

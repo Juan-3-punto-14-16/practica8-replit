@@ -118,8 +118,8 @@ a { color: inherit; }
 .nav-wrap { max-width: 1200px; margin: auto; padding: 0 24px; min-height: 76px; display:flex; align-items:center; justify-content:space-between; gap:22px; }
 .brand { display:flex; gap:11px; align-items:center; text-decoration:none; color:#A50010; min-width:max-content; }
 .brand-clover { display:block; flex:0 0 auto; color:#A50010; }
-.brand-clover-header { width:36px; height:36px; color:#A50010; }
-.brand-clover-footer { width:32px; height:32px; color:#FFFFFF; }
+.brand-clover-header { width:36px; height:36px; }
+.brand-clover-footer { width:32px; height:32px; }
 .brand-name { font:700 18px/1 var(--app-font-serif); letter-spacing:-.04em; }
 .brand-sub { display:block; color:#766b60; font-size:9px; font-weight:700; letter-spacing:.13em; text-transform:uppercase; margin-top:5px; }
 .nav-links { display:flex; gap:26px; align-items:center; }

@@ -64,21 +64,25 @@ const formatPrice = (value: number) => `$${value.toFixed(2)} MXN`;
 function CloverIcon({ size }: { size: 'header' | 'footer' }) {
   return (
     <svg
-      width="36"
-      height="36"
-      viewBox="0 0 100 100"
-      fill="currentColor"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
       className={`brand-clover brand-clover-${size}`}
+      viewBox="0 0 48 54"
+      aria-hidden="true"
       focusable="false"
       data-testid={`icon-clover-${size}`}
     >
-      <path d="M 48 48 C 36 48 16 44 16 28 C 16 18 26 14 33 21 C 33 13 44 12 47 23 C 49 32 48 42 48 48 Z" />
-      <path d="M 52 48 C 52 42 51 32 53 23 C 56 12 67 13 67 21 C 74 14 84 18 84 28 C 84 44 64 48 52 48 Z" />
-      <path d="M 48 52 C 48 58 49 68 47 77 C 44 88 33 87 33 79 C 26 86 16 82 16 72 C 16 56 36 52 48 52 Z" />
-      <path d="M 52 52 C 64 52 84 56 84 72 C 84 82 74 86 67 79 C 67 87 56 88 53 77 C 51 68 52 58 52 52 Z" />
-      <path d="M 48.5 50 Q 49 74 41 91 L 47 93 Q 54 75 51.5 50 Z" />
+      <path
+        d="M24 25 C24 33 24 38 28 43 C31 47 34 49 37 51"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+      <g fill="currentColor">
+        <path d="M24 25 C21 22 14 17 14 11 C14 4 21 4 24 11 C27 4 34 4 34 11 C34 17 27 22 24 25 Z" />
+        <path d="M24 25 C21 22 14 17 14 11 C14 4 21 4 24 11 C27 4 34 4 34 11 C34 17 27 22 24 25 Z" transform="rotate(90 24 25)" />
+        <path d="M24 25 C21 22 14 17 14 11 C14 4 21 4 24 11 C27 4 34 4 34 11 C34 17 27 22 24 25 Z" transform="rotate(180 24 25)" />
+        <path d="M24 25 C21 22 14 17 14 11 C14 4 21 4 24 11 C27 4 34 4 34 11 C34 17 27 22 24 25 Z" transform="rotate(270 24 25)" />
+      </g>
     </svg>
   );
 }
